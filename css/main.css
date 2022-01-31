@@ -2,7 +2,10 @@
 *, h1, h2, h3, h4, h5, p, ul, a {
     margin: 0;
     padding: 0;
+
 }
+
+/*h1{text-shadow: 2px 1px 2px gainsboro}*/
 
 *,
 *:before,
@@ -22,8 +25,8 @@ html, body {
     color: #504a4a;
     display: flex;
     flex-direction: column;
-    min-width: 100vh;
-    min-height: 90vh;
+    min-width: 120vh;
+    min-height: 120vh;
 }
 
 .main {
@@ -48,7 +51,11 @@ p + a:not (.btn) { /*запись обозначает , что когда ли�
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
     font-weight: 300;
-    color: #504a4a;
+    /*color: #504a4a;*/
+}
+
+li {
+    text-shadow: 1px 1px 0 black;
 }
 
 h1 {
@@ -88,6 +95,10 @@ h4 {
 .section-padding {
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+img {
+    max-width: 100%;
 }
 
 /*
@@ -143,6 +154,11 @@ Universal*/
     transform: translate3d(0, -3px, 0);
 }
 
+img {
+    box-shadow: 0 23px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
 /*navbar*/
 .navbar {
     position: absolute;
@@ -175,19 +191,18 @@ Universal*/
 
 .navbar-nav li a {
     color: white;
+    font-size: 15px;
     text-transform: uppercase;
-    font-size: 14px;
     letter-spacing: 1px;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    font-weight: 600;
 }
 
 .navbar-nav li a:hover {
-    color: white;
+    color: red;
     transform: translate3d(0, -2px, 0);
     opacity: 1;
-    font-weight: 600;
-
 }
 
 .navbar-nav li {
@@ -226,10 +241,6 @@ Universal*/
     height: 100%;
 }
 
-.phone h1 {
-    margin-bottom: 25px;
-    color: white;
-}
 
 .phone .container {
     max-width: 800px;
@@ -244,49 +255,43 @@ Universal*/
 
 
 /*skills*/
+.name {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.section-skills {
+    background-color: gainsboro;
+}
 
 .skills {
+    position: relative;
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-wrap: normal;
+
 }
 
-.skills-col {
+.skills li {
+    color: #3f3fa3;
+}
+
+.skill-col {
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .skill {
-    border: 1px solid black;
     padding: 25px;
-    border-radius: 12px;
-    width: 350px;
-}
-
-@media (max-width: 826px) {
-  .skills {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-  }
-      .skill {
-          width: 500px;
-      }
-    }
-@media (max-width: 600px){
-    .skill {
-        width: 430px;
-    }
-}
-@media (max-width: 400px){
-    .skill {
-        width: 300px;
-    }
+    border-radius: 10px;
+    background-color: #e6e3e3;
 }
 
 .skill img {
@@ -300,22 +305,124 @@ Universal*/
 }
 
 .skill p {
+    max-width: 280px;
     margin: 0 auto 30px auto;
-    font-size: 17px;
+    font-size: 13px;
     line-height: 1.7;
 }
 
+@media (min-width: 756px) {
+    .skill-col {
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 0;
+
+    }
+}
+
 .section-grey {
-    border-right: grey;
+    border-top: grey;
     background-color: #fcf8f8;
 }
 
+/*"hobby-section"*/
+.hobby-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hobby-img {
+    order: -1;
+    margin-bottom: 40px;
+}
+
+.hobby-section h2, p {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .hobby-section {
+        margin-right: -25px;
+        margin-left: -25px;
+    }
+
+    .hobby-img {
+        order: initial;
+        margin-bottom: 0;
+    }
+
+    .hobby-img, .hobby-text {
+        max-width: 50%;
+        width: 100%;
+
+    }
+}
+
+/*
+project*/
+
+.project {
+    display: flex;
+    text-align: center;
+    position: relative;
+    min-height: 50vh;
+    min-width: 80vh;
+    background-size: cover;
+    background-position: left;
+}
+
+.project h1 {
+    font-weight: 300;
+    padding-top: 100px;
+    font-size: 40px;
+    color: white;
+}
+
+.project .container {
+    max-width: 800px;
+    position: relative;
+}
+
+.project:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    color: white;
+    background-color: #8a69ed;
+}
+
+.img-project {
+    width: 300px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.one-project{
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px 30px;
+    padding: 25px;
+}
 /*footer*/
+
+.footer-row .container {
+    background-color: #531e1e;
+    position: relative;
+}
+
 .footer-row {
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
+
 }
 
 .footer-copyright {
