@@ -41,56 +41,7 @@
             <h1>Arina's portfolio</h1>
             <p class="lead">You are on Arina's page. I am glad to welcome you.
             </p>
-            <a href="#" class="btn btn-primary">Button</a>
-        </div>
-    </section>
-
-    <section class="section-padding section-skills">
-        <div class="container">
-            <h1 class="name">My skills</h1>
-            <div class="skills">
-                <div class="skill-col">
-                    <div class="skill">
-                        <img src="css/image/js.png " alt="js">
-                        <h4>Java Script</h4>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae debitis
-                            esse fugiat
-                            id inventore iste itaque natus non quibusdam quis ratione rem, saepe sequi tempora ut,
-                            vitae! Dolor, quia.</p>
-                    </div>
-                </div>
-                <div class="skill-col">
-                    <div class="skill">
-                        <img src="css/image/react.png " alt="js">
-                        <h4>React</h4>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae debitis
-                            esse fugiat
-                            id inventore iste itaque natus non quibusdam quis ratione rem, saepe sequi tempora ut,
-                            vitae! Dolor, quia.</p>
-                    </div>
-                </div>
-
-                <div class="skill-col">
-                    <div class="skill">
-                        <img src="css/image/redux.png " alt="js">
-                        <h4>Redux</h4>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae debitis
-                            esse fugiat
-                            id inventore iste itaque natus non quibusdam quis ratione rem, saepe sequi tempora ut,
-                            vitae! Dolor, quia.</p>
-                    </div>
-                </div>
-                <div class="skill-col">
-                    <div class="skill">
-                        <img src="css/image/redux.png " alt="js">
-                        <h4>Redux</h4>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet beatae debitis
-                            esse fugiat
-                            id inventore iste itaque natus non quibusdam quis ratione rem, saepe sequi tempora ut,
-                            vitae! Dolor, quia.</p>
-                    </div>
-                </div>
-            </div>
+          <!--  <a href="#" class="btn btn-primary">Button</a>-->
         </div>
     </section>
 
@@ -99,25 +50,49 @@
             <div class="hobby-section">
 
                 <div class="hobby-text">
-                    <h2>About my hobby</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis harum quam
-                        voluptatum.
-                        Atque deserunt,
-                        dignissimos excepturi facilis iusto minima minus molestiae mollitia obcaecati porro possimus
-                        quos recusandae, sit suscipit.
-                    </p>
-                    <a href="#"> More information</a>
+                    <h2>About me</h2>
+                    <p class="lead">I am Arina. I started learning js 10 months ago. I choose to study java script and
+                        React, because
+                        I like to create something new.
+                        <br> I have several applications on React and Redux.</p>
+                    <p class="lead"> I want to develop, programming allow me do it.
+                        Time flies when I study js and make aplications, I am passionate about it.</p>
                 </div>
 
                 <div class="hobby-img">
-                    <img src="css/image/photo3.jpg" alt="hobby" class="img-shadow image-rounded">
+                    <div class="slider">
+                        <div class="item">
+                            <img src="css/image/photo3.jpg" alt="hobby">
+                        </div>
+
+                        <div class="item">
+                            <img src="css/image/photo5.jpg" alt="hobby" class="img-shadow image-rounded">
+                        </div>
+
+                        <div class="item">
+                            <img src="css/image/photo2.jpg" alt="hobby" class="img-shadow image-rounded">
+                        </div>
+
+                        <div class="item">
+                            <img src="css/image/photo4.jpg" alt="hobby" class="img-shadow image-rounded">
+                        </div>
+                        <a class="prev" onclick="minusSlide()">&#10094;</a>
+                        <a class="next"  onclick="plusSlide()">&#10095;</a>
+                    </div>
+
+
                 </div>
 
+                <div class="slider-dots">
+                    <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+                    <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+                    <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+                    <span class="slider-dots_item" onclick="currentSlide(4)"></span>
+                </div>
             </div>
-
         </div>
-
     </section>
+    <script src="script.js"></script>
 </main>
 <footer>
     <div class="container">
@@ -125,25 +100,24 @@
             <small class="footer-copyright">@2022 Arina Kumeisha portfolio</small>
             <ul class="footer-social">
                 <li>
-                    <a href="#">
+                    <a href="https://github.com/ArinaKumeisha">
                         <img src="css/image/github.png" alt="git">
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/arina-kumeisha-3051ab221/">
                         <img src="css/image/link.png" alt="linkedin">
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        <img src="css/image/google.png" alt="gmail">
-                    </a>
+                    <a href="mailto:arinanozdracheva2021@gmail.com">
+                        <img src="css/image/google.png" alt="gmail"></a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/arinakumeisha/">
                         <img src="css/image/instagram.png" alt="instagram">
                     </a>
                 </li>
